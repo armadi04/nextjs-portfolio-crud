@@ -1,0 +1,14 @@
+{
+  "name": "nirnaya-cloud-native-ai-platform",
+  "version": "1.0.0",
+  "description": "Root runner for Cloud Native AI Platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:backend\" \"npm:frontend\"",
+    "backend": "venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --port 8000",
+    "frontend": "npm run dev --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
